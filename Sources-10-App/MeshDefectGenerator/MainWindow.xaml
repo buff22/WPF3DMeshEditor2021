@@ -5,8 +5,40 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MeshDefectGenerator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Mesh Defect Generator"
+        Width="1280" Height="720">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
         
+        <!-- [#1] Control Area -->
+        <StackPanel Grid.Column="0">
+            
+            <!-- [#1-1] Load STL -->
+            <Button x:Name="gui_LoadSTL"
+                    Content="Load STL"
+                    FontSize="15" FontWeight="Bold"
+                    Width="150" Height="50"
+                    Margin="10"/>            
+            <!--<Border BorderBrush="Black"
+                    BorderThickness="2"
+                    Margin="10">
+            </Border>-->
+        </StackPanel>
+        
+        <!-- [#2] Rendering Area -->
+        <Viewport3D Grid.Column="1"
+                    x:Name="gui_Viewport3D"/>
+        
+        <!-- [#3] Information Area -->
+        <StackPanel Grid.Column="2">
+            <!--<Border BorderBrush="Black"
+                    BorderThickness="2"
+                    Margin="10">
+            </Border>-->
+        </StackPanel>
     </Grid>
 </Window>
